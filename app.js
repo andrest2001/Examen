@@ -6,6 +6,8 @@ const logger = require('morgan');
 const {engine} = require('express-handlebars')
 const {database} =require('./keys')
 const timeago = require('timeago.js')
+const dotenv = require('dotenv')
+dotenv.config()
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
