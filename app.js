@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const {engine} = require('express-handlebars')
 const {database} =require('./keys')
+const timeago = require('timeago.js')
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');

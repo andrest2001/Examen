@@ -1,4 +1,3 @@
-
 {{#each images}}
     <div class="card border-light mb-3" style="max-width: 18rem;">
         <div class="card-header">
@@ -16,14 +15,4 @@
             <a href="/images/dislikes/{{{id}}}"><button  class="btn"><i class="fa-solid fa-thumbs-down">{{dislikes}}</i></button></a>
         </div>
     </div>
-{{else}}
-    <div class="col-md-4 mx-auto">
-        <div class="card card-body text-center">
-            <p>Debeías de crear una imagen</p>
-            <a href="/images/add">Crear</a>
-        </div>
-    </div>
-
 {{/each}}
-
-    
