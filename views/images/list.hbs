@@ -9,8 +9,20 @@
         <div class="card-body">
             <img src="{{imagen}}" alt="" class="w-50">
             <p class="card-text">{{descripcion}}</p>
+            <a href="/images/delete/{{{id}}}" class="btn btn-danger">Borrar</a>
+            <a href="/images/edit/{{{id}}}" class="btn btn-info">Editar</a>
+            <i class="fa-solid fa-thumbs-up"></i>
+            <i class="fa-solid fa-thumbs-down"></i>
         </div>
     </div>
+{{else}}
+    <div class="col-md-4 mx-auto">
+        <div class="card card-body text-center">
+            <p>Debeías de crear una imagen</p>
+            <a href="/images/add">Crear</a>
+        </div>
+    </div>
+
 {{/each}}
 
     

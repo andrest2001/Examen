@@ -1,0 +1,22 @@
+<div class="container p-4 border rounded mx-auto col-5 mt-3">
+    <form action="/images/edit/{{images.id}}" method="POST" >
+        <div class="form-group column">
+            <label>Titulo</label>
+            <input type="text" class="form-control" value="{{images.titulo}}" name="titulo" placeholder="Escriba el título de la imagen" autofocus>
+            
+        </div>
+
+        <div class="form-group">
+            <label>Imagen</label>
+            <input type="url" class="form-control" value="{{images.imagen}}" name="imagen" placeholder="Url de la imagen">
+        </div>
+
+        <div class="form-group column">
+            <label>Descripcion</label>
+            <textarea name="descripcion" rows="4" placeholder="Escriba aquí la descripción" value="{{images.descripcion}}"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+
