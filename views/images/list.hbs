@@ -1,21 +1,25 @@
 
 {{#each images}}
-    <div class="card border-light mb-3" style="max-width: 18rem;">
-        <div class="card-header">
-            <h1>
-                {{titulo}}
-            </h1>
-        </div>
-        <div class="card-body">
-            <img src="{{imagen}}" alt="" class="w-50">
-            <p class="card-text">{{descripcion}}</p>
-            <a href="/images/delete/{{{id}}}" class="btn btn-danger">Borrar</a>
-            <a href="/images/edit/{{{id}}}" class="btn btn-info">Editar</a>
-            <p>{{timeago created_at}}</p>
-            <a href="/images/likes/{{{id}}}"><button class="btn"><i class="fa-solid fa-thumbs-up">{{likes}}</i></button></a>
-            <a href="/images/dislikes/{{{id}}}"><button  class="btn"><i class="fa-solid fa-thumbs-down">{{dislikes}}</i></button></a>
+    <div class="container-fluid w-auto">
+        <div class="card border-light mb-3" style="max-width: 18rem;">
+            <div class="card-header">
+                <h1>
+                    {{titulo}}
+                </h1>
+            </div>
+            <div class="card-body">
+                <img src="{{imagen}}" alt="" class="w-50">
+                <p class="card-text">{{descripcion}}</p>
+                <a href="/images/delete/{{{id}}}" class="btn btn-danger">Borrar</a>
+                <a href="/images/edit/{{{id}}}" class="btn btn-info">Editar</a>
+                <p>{{timeago created_at}}</p>
+                <a href="/images/likes/{{{id}}}"><button class="btn"><i class="fa-solid fa-thumbs-up">{{likes}}</i></button></a>
+                <a href="/images/dislikes/{{{id}}}"><button  class="btn"><i class="fa-solid fa-thumbs-down">{{dislikes}}</i></button></a>
+            </div>
         </div>
     </div>
+
+    
 {{else}}
     <div class="col-md-4 mx-auto">
         <div class="card card-body text-center">
@@ -25,5 +29,9 @@
     </div>
 
 {{/each}}
+
+<a href="/images/masvotadas" class="btn btn-info">Mejores fotos</a>
+<a href="/images/peorvotadas" class="btn btn-danger">Peores fotos</a>
+
 
     
